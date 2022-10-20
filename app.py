@@ -79,3 +79,6 @@ def home():
         'northbound': northbound,
         'southbound': southbound,
     }
+
+if __name__ == "__main__":
+    app.run(debug=True)
