@@ -7,6 +7,7 @@ import requests
 from pytz import timezone
 from datetime import datetime
 from constants import API_ACCESS_KEY, PRIMARY_LINE, DIRECTION_MAP
+import os
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -80,5 +81,6 @@ def home():
         'southbound': southbound,
     }
 
+port = int(os.environ.get("PORT", 5000))
 if __name__ == "__main__":
     app.run(debug=True)
